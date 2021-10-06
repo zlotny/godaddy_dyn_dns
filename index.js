@@ -18,13 +18,9 @@ async function checkIfNewIP() {
     let ip = res.data.ip;
     console.log("Cheking if IP was changed");
     console.log("Previous IP was", previousIP, "; new IP is:", ip);
-    if (!previousIP) {
+    if (ip != previousIP) {
+        updateGoDaddy(ip);
         previousIP = ip;
-    } else {
-        if (ip != previousIP) {
-            updateGoDaddy(ip);
-            previousIP = ip;
-        }
     }
 }
 

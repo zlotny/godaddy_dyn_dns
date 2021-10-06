@@ -21,6 +21,7 @@
 !.nycrc
 !.eslintrc.yaml
 !.cpplint
+!.env.example
 
 # === Rules for root dir ===
 /core
